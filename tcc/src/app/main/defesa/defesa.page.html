@@ -1,0 +1,34 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Time de Defesa</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-text><h5>O time de defesa é responsavel pela parte defensiva do time, evitando com que a equipe advesária
+          pontue, é geralmente composta por jogadores mais fortes, ja que são resposáveis pelo tackle.</h5>
+        </ion-text>
+      </ion-col>
+    </ion-row>
+        <ion-row>
+      <ion-col>
+        <ion-col>
+          <ion-row>
+            <ion-text><h1>Conceitos</h1></ion-text>
+          </ion-row>
+        </ion-col>
+      <ion-list>
+        <ion-item *ngFor= "let deftatica of defTaticas" [routerLink]= "['./', deftatica.id]">
+          <ion-label>{{deftatica.titulo}}</ion-label>
+        </ion-item>
+      </ion-list>
+      </ion-col>
+    </ion-row>
+</ion-grid>
+</ion-content>

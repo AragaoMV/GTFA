@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot ="start">
+      <ion-back-button ></ion-back-button>
+    </ion-buttons>
+    <ion-title>{{ loadedTatica?.titulo }}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid no-padding>
+    <ion-row>
+      <ion-col>
+        <ion-img [src]="loadedTatica?.imagem"></ion-img>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <h1 text-center> </h1>
+      </ion-col>
+    </ion-row>
+        <ion-grid padding>
+          <ion-row>
+            <ion-col>
+          <ion-text><h5>{{ loadedTatica?.texto }}</h5></ion-text>
+        </ion-col>
+      </ion-row>
+         </ion-grid>
+  </ion-grid>
+</ion-content>
