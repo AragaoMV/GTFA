@@ -1,0 +1,3 @@
+git clone -> clonar repositorio com o link http
+git add-> envia os arquivos pro repositorio
+* -> todos os arquivos
