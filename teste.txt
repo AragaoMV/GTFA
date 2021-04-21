@@ -5,3 +5,6 @@ git commit -> envia pro repositorio
  -m-> mensagem
 
 git push -> envia direto pra raiz
+
+git init -> inicia o repositorio
+git remote add origin link -> 
