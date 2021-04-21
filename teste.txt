@@ -7,4 +7,4 @@ git commit -> envia pro repositorio
 git push -> envia direto pra raiz
 
 git init -> inicia o repositorio
-git remote add origin link -> 
+git remote add origin link -> cria o reposito
