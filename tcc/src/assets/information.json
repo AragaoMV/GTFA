@@ -1,0 +1,110 @@
+{
+  "items":[
+      {
+        "name": "Ataque",
+        "children":[
+          { "name": "Quarterback (QB)",
+            "children":[
+              {
+                "information":"O QB é conhecido como o General em campo, é responsavel em liderar o time, e articular o jogo."
+              }
+            ]
+        },
+        { "name": "Runningback (RB)",
+          "children":[
+            {
+              "information":"O Runningback é responsavel por correr com a bola recebida pelo QB. O runningback é dividido em 3 tipos: Halfback (HB), Fullback (FB) e Tailback (TB), de acordo com a formação."
+            }
+          ]
+        },
+        { "name": "Wide Reciever (WR)",
+          "children":[
+            {
+              "information":"Os Recievers são os jogadores que recebem a bola do Quaterback, Os recebedores são dividos em 3: Flanker(X), Wideout(WO/Y) e SlotReciever (SR), variando de acordo com a formação."
+            }
+          ]
+        },
+        { "name": "Tight-End (TE)",
+          "children":[
+            {
+              "information":"TightEnds são uma classe de recebedores onde os jogadores possuem um porte fisico mais forte, sendo um hibrido entre recebedores e jogadores de linha ofensiva. "
+            }
+          ]
+        },
+        { "name": "Linha ofensiva (OL)",
+          "children":[
+            {
+              "information":"OS jogadores de linha ofensiva são resposaveis por fazer os bloqueios, tanto para o QB, tanto para os RBs. A linha ofeniva é dividida em Center (C), Tackle(Direita (RT) e Esquerda (LT)) e Guard(Direita (RG) e Esqueda (LG))."
+            }
+          ]
+        }
+
+      ]
+      },
+      { "name": "Defesa",
+        "children":[
+          {
+            "name": "Safeties (S)",
+            "children":[
+              {
+                "information":"Os Safeties são resposaveis por cobrir o fundo do campo ed corridas e passes longos. Existem 2 tipos de Safeties: Strong Safety(SS) responsavel por ficar no lado do ampo onde possuí mias jogadores ofensivos e o Free Safety(FS) resposavel por cobrir o meio e fundo do campo."
+              }
+            ]
+        },
+        { "name": "Cornerbacks (CB)",
+          "children":[
+            {
+              "information":"Os corners são resposaveis por impedir os recebedores de receberem passes e previnir as jogadas do ataque."
+            }
+          ]
+        },
+        {
+          "name": "Linebacker (LB)",
+          "children":[
+            {
+              "information":"Os Linebackers são os joagadores que servem como cobertura para os jogadores da linha defensiva, ajudando a interromper corrida e cobrir zonas no meio do campo dos recebedores. Os Linebackers são divididos em 2 Outside Linebacker(OLB) e Middle Linebacker (MLB)."
+            }
+          ]
+      },
+      {
+        "name": "Linha defensiva (DL)",
+        "children":[
+          {
+            "information":"Os jogadores de linha defensiva são responsaeis por precionar o QB, derrubando-o antes de lançar a bola, ou impedir os RBs de correrem com a bola. Eles são dividos em Defensive Tacle (Direita (RDT) e Esquerda(LDT)) e Defensive Ends(Direita(RDE) e Esquerda (LDE)), quando a formação da defesa for com 3 DLS, o jogador no meio é o Nose Tackle (NT)."
+          }
+        ]
+    }
+        ]
+      },
+
+      {
+        "name": "Times Especiais",
+        "children":[
+          {
+            "name": "Retornador (R)",
+            "children":[
+              {
+                "information":"O retornador é resposavel por receber a bola de um punt ou kickoff e levar para o mais longe possível."
+              }
+            ]
+        },
+        {
+          "name": "Punter (P)",
+          "children":[
+            {
+              "information":"O punter é quem chuta a bola quando o time do ataque falha em conseguir a primeira descida"
+            }
+          ]
+        },
+        {
+          "name": "Kicker (K)",
+          "children":[
+            {
+              "information":"O jogador é responsavel por chutar a bola dentro do Goal Post para pontuações e também em kickoffs."
+            }
+          ]
+      }
+        ]
+      }
+  ]
+}
