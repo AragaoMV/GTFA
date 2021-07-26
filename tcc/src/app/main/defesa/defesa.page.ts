@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {DefTatica} from './defesa.model'
+import {DefTatica} from './defesa.model';
 import { DefesaService } from './defesa.service';
 
 @Component({

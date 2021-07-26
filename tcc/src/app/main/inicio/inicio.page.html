@@ -1,5 +1,5 @@
 <ion-header>
-  <ion-toolbar>
+  <ion-toolbar color="success">
     <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
@@ -7,23 +7,32 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content padding>
-  <ion-grid>
+<ion-content >
+  <ion-card style="height:115%">
     <ion-row>
       <ion-col>
-       <ion-text><h5>O futebol americano ou simplesmente football, como é conhecido nos Estados Unidos, é um esporte competitivo
-        de equipe, cada qual composta de 11 jogadores em cada lado. É um jogo que demanda velocidade, agilidade,
-         capacidade tática e força dos jogadores que se empurram, bloqueiam, perseguem uns aos outros tentando
-         fazer avançar uma bola em território inimigo durante uma hora de tempo de jogo.</h5>
+       <ion-text><br/>
+      <h5>
+        &nbsp;&nbsp;O futebol americano é mais do que um esporte de contato. Força, agilidade,
+        intensidade e o conhecimento das diversas jogadas a serem realizadas durante uma partida, é o que
+        o torna quase um jogo de tabuleiro, torna os atletas do futebol americano completos e exige o
+        seu máximo em comprometimento e conhecimento.
+      </h5>
           </ion-text>
       </ion-col>
     </ion-row>
     <ion-row>
       <ion-col>
-        <ion-text><p>Esse app serve como um guia para atletas e amantes do esporte, feito com maneira didática,
+        <ion-text><p>Esse app serve como um guia para atletas e amantes do esporte, feito de maneira didática,
           para aumentar o conhecimento a respeito do esporte.</p>
         </ion-text>
       </ion-col>
     </ion-row>
-  </ion-grid>
+    <ion-list>
+      <ion-item *ngFor= "let detalhegeral of detalheGeral" [routerLink] = "['./', detalhegeral.id]">
+        <ion-icon slot="end" name="chevron-forward-outline"></ion-icon>
+        <ion-label>{{detalhegeral.titulo}}</ion-label>
+     </ion-item>
+    </ion-list>
+  </ion-card>
 </ion-content>

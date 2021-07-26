@@ -7,6 +7,10 @@ const routes: Routes = [
   {
     path: '',
     component: InicioPage
+  },
+  {
+    path: ':detalheGeralId',
+    loadChildren: () => import('./inicio-detalhe/inicio-detalhe.module').then( m => m.InicioDetalhePageModule)
   }
 ];
 

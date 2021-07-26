@@ -1,5 +1,5 @@
 <ion-header>
-  <ion-toolbar>
+  <ion-toolbar color="success">
     <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
@@ -8,7 +8,7 @@
 </ion-header>
 
 <ion-content padding>
-  <ion-grid>
+  <ion-card style="height:130%">
     <ion-row>
       <ion-col>
         <ion-text><h5>O time de ataque é responsavel pela parte ofensiva do time, tem como objetivo pontuar na partida,
@@ -23,8 +23,9 @@
     </ion-col>
       <ion-list>
         <ion-item *ngFor ="let tatica of taticas" [routerLink] = "['./', tatica.id]">
+          <ion-icon slot="end" name="chevron-forward-outline"></ion-icon>
           <ion-label>{{tatica.titulo}}</ion-label>
         </ion-item>
       </ion-list>
-  </ion-grid>
+  </ion-card>
 </ion-content>

@@ -1,0 +1,51 @@
+<ion-header >
+  <ion-toolbar color="success">
+    <ion-buttons slot ="start">
+      <ion-back-button ></ion-back-button>
+    </ion-buttons>
+    <ion-title>Descubra sua posição</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-grid >
+    <ion-row>
+      <ion-col>
+         <h5> Preencha com os dados solictados e descubra qual sua posição ideal no futebol americano*.</h5>
+         <p>No campo Força preencha com o numero de repetições em flexões por minuto.</p>
+         <p>No campo velociade preencha com o tempo que foi levado ao percorrer a distância de 40 jardas em velociade máxima.</p>
+     </ion-col>
+    </ion-row>
+    <form [formGroup] = "form">
+      <ion-grid>
+        <ion-item>
+          <ion-label position="floating"> Altura(cm)  </ion-label>
+          <ion-input type="number" formControlName="altura"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating"> Peso(kg)  </ion-label>
+          <ion-input type="number" formControlName="peso"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating"> Força  </ion-label>
+          <ion-input type="number" formControlName="forca"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating"> Velocidade </ion-label>
+          <ion-input type="number" formControlName="velocidade"></ion-input>
+        </ion-item>
+      </ion-grid>
+    </form>
+      <ion-row>
+        <ion-col>
+        <ion-button expand="block" (click) = "onCreatePosicao()">Enviar</ion-button>
+        </ion-col>
+      </ion-row>
+    <ion-row>
+      <ion-col>
+        <p>*Lembrado que essa pagina serve apenas para um direcional, afinal tudo depende do seu desempenho dentro de campo.
+        </p>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

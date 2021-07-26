@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { DetalheGeral } from './inicio.model';
+import { InicioService } from './inicio.service';
 
 @Component({
   selector: 'app-inicio',
@@ -7,9 +9,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class InicioPage implements OnInit {
 
-  constructor() { }
+  detalheGeral: DetalheGeral[];
+  constructor(private inicioService: InicioService) { }
 
   ngOnInit() {
+    this.detalheGeral= this.inicioService.getAllDetalheGeral();
   }
 
 }

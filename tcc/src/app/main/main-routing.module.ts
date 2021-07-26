@@ -62,6 +62,10 @@ const routes: Routes = [
     path: 'posicao',
     loadChildren: () => import('./posicao/posicao.module').then( m => m.PosicaoPageModule)
   },
+  {
+    path: 'paginaia',
+    loadChildren: () => import('./paginaia/paginaia.module').then( m => m.PaginaiaPageModule)
+  },
 ];
 
 @NgModule({

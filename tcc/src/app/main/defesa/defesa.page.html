@@ -1,5 +1,5 @@
 <ion-header>
-  <ion-toolbar>
+  <ion-toolbar color="success">
     <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
@@ -8,7 +8,7 @@
 </ion-header>
 
 <ion-content padding>
-  <ion-grid>
+  <ion-card style="height:150%">
     <ion-row>
       <ion-col>
         <ion-text><h5>O time de defesa é responsavel pela parte defensiva do time, evitando com que a equipe advesária
@@ -25,10 +25,11 @@
         </ion-col>
       <ion-list>
         <ion-item *ngFor= "let deftatica of defTaticas" [routerLink]= "['./', deftatica.id]">
+          <ion-icon slot="end" name="chevron-forward-outline"></ion-icon>
           <ion-label>{{deftatica.titulo}}</ion-label>
         </ion-item>
       </ion-list>
       </ion-col>
     </ion-row>
-</ion-grid>
+</ion-card>
 </ion-content>

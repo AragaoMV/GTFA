@@ -1,71 +1,65 @@
 <ion-header>
-  <ion-toolbar>
+  <ion-toolbar color="success">
     <ion-buttons slot ="start">
       <ion-back-button ></ion-back-button>
     </ion-buttons>
-    <ion-title>Poisções</ion-title>
+    <ion-title>Posições</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
-  <ion-grid>
-    <ion-col>
-      <ion-row>
-        <ion-text><h5>No futebol americano, cada jogador exerce uma função dentro de campo, sendo em sua grande maioria
-          em um time específico(ataque,defesa ou times especiais). Cada função tem seu nome e função própria em campo.
-         </h5></ion-text>
-      </ion-row>
-    </ion-col>
-    <ion-col>
-      <ion-row>
-        <ion-text><h2>Ataque</h2></ion-text>
-      </ion-row>
-    </ion-col>
-    <ion-list>
-      <ion-item>
-        <ion-label>Quaterback</ion-label>
-      </ion-item>
-      <ion-item>
-        <ion-label>Wide Reciver</ion-label>
-      </ion-item>
-      <ion-item>
-        <ion-label>Runningback</ion-label>
-      </ion-item>
-    </ion-list>
-    <ion-col>
-      <ion-row>
-        <ion-text><h2>Defesa</h2></ion-text>
-      </ion-row>
-    </ion-col>
-    <ion-list>
-      <ion-item>
-        <ion-label>Cornerback</ion-label>
-      </ion-item>
-      <ion-item>
-        <ion-label>Linebacker</ion-label>
-      </ion-item>
-      <ion-item>
-        <ion-label>Edge Rusher</ion-label>
-      </ion-item>
-    </ion-list>
-    <ion-col>
-      <ion-row>
-        <ion-text><h2>Times Especiais</h2></ion-text>
-      </ion-row>
-    </ion-col>
-    <ion-list>
-      <ion-item>
-        <ion-label>Kicker</ion-label>
-      </ion-item>
-      <ion-item>
-        <ion-label>Punter</ion-label>
-      </ion-item>
-      <ion-item>
-        <ion-label>Long Snaper</ion-label>
-      </ion-item>
-    </ion-list>
-  </ion-grid>
 
+<ion-content >
+  <ion-card >
+    <ion-col>
+      <ion-row>
+        <h5> &nbsp;&nbsp;&nbsp;No futebol americano, cada jogador exerce uma função dentro de campo, sendo em sua grande maioria
+          em um time específico (ataque,defesa ou times especiais). Cada posiçãotem seu nome e função específica em campo.
+         </h5>
+      </ion-row>
+    </ion-col>
+
+
+<!– Times –>
+
+  <ion-list *ngFor="let item of information; let i=index;" class="accordion-list" lines="none" detail="false" no-padding>
+    <ion-item tappable (click)="toggleSection(i)" [ngClass]="{'section-active': item.open, 'section': !item.open}">
+      <ion-icon slot="start" name="chevron-forward-outline" *ngIf="!item.open"></ion-icon>
+      <ion-icon slot="start" name="chevron-down-outline" *ngIf="item.open"></ion-icon>
+      <ion-label>
+          {{item.name}}
+      </ion-label>
+    </ion-item>
+
+<!– Posições –>
+
+  <div *ngIf="item.children && item.open">
+    <ion-list class="child-list" *ngFor="let child of item.children; let j = index;" lines="none" no-padding>
+      <ion-item tappable (click)="toggleItem(i, j)" *ngIf="child.children" [ngClass]="{'child-active': child.open, 'child': !child.open}">
+            <ion-icon slot="start" name="chevron-forward-outline" *ngIf="!child.open"></ion-icon>
+            <ion-icon slot="start" name="chevron-down-outline" *ngIf="child.open"></ion-icon>
+            <ion-label>
+              {{child.name}}
+            </ion-label>
+          </ion-item>
+
+<!– Descrição –>
+
+
+          <app-posicao [posicao]="child" *ngIf="!child.children"></app-posicao>
+          <ion-list *ngIf="child.children && child.open" class="posicao-list" lines="none">
+            <app-posicao [posicao]="posicao" *ngFor="let posicao of child.children"></app-posicao>
+            <ion-label>
+              {{child.information}}
+            </ion-label>
+          </ion-list>
+
+    </ion-list>
+  </div>
+
+
+  </ion-list>
+  </ion-card>
 </ion-content>
+
 
 

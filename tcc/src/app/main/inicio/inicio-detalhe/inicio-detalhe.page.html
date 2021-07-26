@@ -3,7 +3,7 @@
     <ion-buttons slot ="start">
       <ion-back-button ></ion-back-button>
     </ion-buttons>
-    <ion-title>{{ loadedDefTatica?.titulo }}</ion-title>
+    <ion-title>{{ loadedDetalheGeral?.titulo}}</ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -11,7 +11,7 @@
   <ion-grid no-padding>
     <ion-row>
       <ion-col no-paddind>
-        <ion-img [src]="loadedDefTatica?.imagem"></ion-img>
+        <ion-img [src]="loadedDetalheGeral?.imagem"></ion-img>
       </ion-col>
     </ion-row>
     <ion-row>
@@ -21,7 +21,7 @@
     </ion-row>
     <ion-row>
       <ion-col>
-        <ion-text><h5>{{ loadedDefTatica?.texto }}</h5></ion-text>
+        <ion-text><h5>{{ loadedDetalheGeral?.texto }}</h5></ion-text>
       </ion-col>
     </ion-row>
   </ion-grid>

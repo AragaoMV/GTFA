@@ -1,0 +1,19 @@
+ion-content {
+  --background: url(/assets/FundoInicio.jpeg) no-repeat;
+  text-align: center;
+}
+ion-card{
+  background: rgba(255,255,255,0.8);
+  font-weight: bold;
+  color: black;
+  margin: 0%;
+  text-align: justify;
+}
+h5{
+  font-weight: 525;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+.ios ion-toolbar{
+  text-align: left;
+}
